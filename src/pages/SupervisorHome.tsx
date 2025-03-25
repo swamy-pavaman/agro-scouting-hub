@@ -5,7 +5,7 @@ import { TaskCard } from "@/components/TaskCard";
 import { ActionButton } from "@/components/ActionButton";
 import { TabView } from "@/components/TabView";
 import { NotificationItem } from "@/components/NotificationItem";
-import { Leaf, Spray, Sprout, Fuel, Scale, ChevronRight } from "lucide-react";
+import { Leaf, Droplet, Sprout, Fuel, Scale, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const SupervisorHome = () => {
@@ -119,7 +119,7 @@ const SupervisorHome = () => {
           <ActionButton 
             title="Spraying" 
             to="/submit/spraying" 
-            icon={Spray} 
+            icon={Droplet} 
             color="#10B981" 
             bgColor="#ECFDF5" 
           />

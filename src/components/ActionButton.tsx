@@ -1,13 +1,11 @@
 
-import { IconProps } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface ActionButtonProps {
   title: string;
   to: string;
-  icon: React.ForwardRefExoticComponent<
-    IconProps & React.RefAttributes<SVGSVGElement>
-  >;
+  icon: LucideIcon;
   color: string;
   bgColor: string;
 }

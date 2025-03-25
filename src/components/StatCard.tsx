@@ -1,14 +1,12 @@
 
-import { IconProps } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
 interface StatCardProps {
   title: string;
   value: string;
   change?: string;
   isPositive?: boolean;
-  icon: React.ForwardRefExoticComponent<
-    IconProps & React.RefAttributes<SVGSVGElement>
-  >;
+  icon: LucideIcon;
   color: string;
 }
 
