@@ -1,9 +1,13 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import SupervisorHome from "./pages/SupervisorHome";
+import ManagerHome from "./pages/ManagerHome";
+import TaskSubmission from "./pages/TaskSubmission";
+import TaskReview from "./pages/TaskReview";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -15,8 +19,18 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* Default route redirects to supervisor home */}
+          <Route path="/" element={<Navigate to="/supervisor" replace />} />
+          
+          {/* Supervisor routes */}
+          <Route path="/supervisor" element={<SupervisorHome />} />
+          <Route path="/submit/:type" element={<TaskSubmission />} />
+          
+          {/* Manager routes */}
+          <Route path="/manager" element={<ManagerHome />} />
+          <Route path="/task/:id" element={<TaskReview />} />
+          
+          {/* Catch-all route for 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
