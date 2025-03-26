@@ -14,6 +14,7 @@ import ManagerHome from "./pages/ManagerHome";
 import TaskSubmission from "./pages/TaskSubmission";
 import TaskReview from "./pages/TaskReview";
 import Notifications from "./pages/Notifications";
+import Profile from "./pages/Profile";
 import Reports from "./pages/Reports";
 import NotFound from "./pages/NotFound";
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/supervisor" element={<SupervisorHome />} />
           <Route path="/submit/:type" element={<TaskSubmission />} />
           <Route path="/notifications" element={<Notifications />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/reports" element={<Reports />} />
           
           {/* Manager routes */}

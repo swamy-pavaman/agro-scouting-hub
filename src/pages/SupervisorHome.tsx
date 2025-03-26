@@ -1,10 +1,10 @@
 
 import { Navbar } from "@/components/Navbar";
+import { BottomNav } from "@/components/BottomNav";
 import { TaskCard } from "@/components/TaskCard";
 import { ActionButton } from "@/components/ActionButton";
 import { TabView } from "@/components/TabView";
 import { Leaf, Droplet, Sprout, Fuel, Scale } from "lucide-react";
-import { WeatherReport } from "@/components/WeatherReport";
 
 const SupervisorHome = () => {
   const pendingTasks = [
@@ -52,11 +52,7 @@ const SupervisorHome = () => {
     <div className="min-h-screen bg-background">
       <Navbar title="Supervisor Dashboard" userType="supervisor" />
       
-      <main className="container mx-auto px-4 pt-20 pb-6">
-        <div className="mb-6">
-          <WeatherReport />
-        </div>
-
+      <main className="container mx-auto px-4 pt-20 pb-20">
         <h2 className="text-xl font-semibold mb-4 mt-2 animate-fade-in">Task List</h2>
         
         <TabView 
@@ -133,6 +129,8 @@ const SupervisorHome = () => {
           />
         </div>
       </main>
+
+      <BottomNav userType="supervisor" />
     </div>
   );
 };
