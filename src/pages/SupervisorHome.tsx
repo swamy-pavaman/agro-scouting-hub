@@ -4,9 +4,7 @@ import { BottomNav } from "@/components/BottomNav";
 import { TaskCard } from "@/components/TaskCard";
 import { ActionButton } from "@/components/ActionButton";
 import { TabView } from "@/components/TabView";
-import { NotificationItem } from "@/components/NotificationItem";
-import { Leaf, Droplet, Sprout, Fuel, Scale, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Leaf, Droplet, Sprout, Fuel, Scale } from "lucide-react";
 
 const SupervisorHome = () => {
   const pendingTasks = [
@@ -47,21 +45,6 @@ const SupervisorHome = () => {
       date: "May 10, 11:20 AM",
       type: "sowing" as const,
       status: "rejected" as const,
-    },
-  ];
-
-  const notifications = [
-    {
-      title: "Task Approved",
-      message: "Your scouting report for Block B has been approved by the manager.",
-      time: "2 hours ago",
-      isRead: false,
-    },
-    {
-      title: "New Advice",
-      message: "Manager suggests increasing water in Block C due to dry conditions.",
-      time: "Yesterday",
-      isRead: true,
     },
   ];
 
@@ -144,18 +127,6 @@ const SupervisorHome = () => {
             color="#EC4899" 
             bgColor="#FCE7F3" 
           />
-        </div>
-
-        <div className="mt-8 mb-2 flex justify-between items-center animate-fade-in">
-          <h2 className="text-xl font-semibold">Notifications</h2>
-          <Link to="/notifications" className="text-sm text-agro-primary flex items-center">
-            View all <ChevronRight className="w-4 h-4 ml-1" />
-          </Link>
-        </div>
-        <div className="mb-6">
-          {notifications.map((notification, index) => (
-            <NotificationItem key={index} {...notification} />
-          ))}
         </div>
       </main>
 
