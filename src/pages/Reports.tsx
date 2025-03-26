@@ -68,9 +68,7 @@ const Reports = () => {
                 content: (
                   <div className="h-64">
                     <BarChart 
-                      data={weeklyData} 
-                      xAxisKey="name" 
-                      barKey="value" 
+                      data={weeklyData}
                       color="#3B82F6"
                     />
                   </div>
@@ -81,9 +79,7 @@ const Reports = () => {
                 content: (
                   <div className="h-64">
                     <BarChart 
-                      data={monthlyData} 
-                      xAxisKey="name" 
-                      barKey="value" 
+                      data={monthlyData}
                       color="#10B981"
                     />
                   </div>
