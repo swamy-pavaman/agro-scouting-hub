@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Plant, Sun, Sprout } from "lucide-react";
 
 const SplashScreen = () => {
   const navigate = useNavigate();
@@ -35,21 +36,32 @@ const SplashScreen = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="mb-8"
         >
-          <div className="w-32 h-32 mx-auto bg-agro-primary rounded-full flex items-center justify-center mb-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="64"
-              height="64"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+          <div className="w-32 h-32 mx-auto bg-gradient-to-br from-agro-primary to-agro-secondary rounded-full flex items-center justify-center mb-4 shadow-lg relative overflow-hidden">
+            {/* Logo elements */}
+            <motion.div 
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.4, duration: 0.6, type: "spring" }}
+              className="absolute"
             >
-              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
+              <Sun className="w-32 h-32 text-agro-accent/30 absolute -top-8 -right-8" strokeWidth={1} />
+            </motion.div>
+            
+            <motion.div 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+              className="relative z-10"
+            >
+              <Sprout className="w-12 h-12 text-white" strokeWidth={2.5} />
+            </motion.div>
+            
+            <motion.div 
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.8, duration: 0.5 }}
+              className="absolute bottom-0 w-full h-6 bg-agro-dark/20 rounded-b-full"
+            />
           </div>
           <h1 className="text-4xl font-bold tracking-tight">Kapil Agro</h1>
           <p className="text-xl text-agro-primary font-medium mt-2">Scouting Hub</p>
