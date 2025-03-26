@@ -13,7 +13,7 @@ const Index = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl animate-fade-in">
         <Link 
-          to="/supervisor" 
+          to="/login" 
           className="flex flex-col items-center p-8 bg-white rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow"
         >
           <div className="w-20 h-20 rounded-full bg-agro-light flex items-center justify-center mb-4">
@@ -26,7 +26,7 @@ const Index = () => {
         </Link>
         
         <Link 
-          to="/manager" 
+          to="/login" 
           className="flex flex-col items-center p-8 bg-white rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow"
         >
           <div className="w-20 h-20 rounded-full bg-agro-light flex items-center justify-center mb-4">
