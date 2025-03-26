@@ -4,8 +4,11 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Index from "./pages/Index";
+import SplashScreen from "./pages/SplashScreen";
+import WelcomeScreen from "./pages/WelcomeScreen";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Onboarding from "./pages/Onboarding";
 import SupervisorHome from "./pages/SupervisorHome";
 import ManagerHome from "./pages/ManagerHome";
 import TaskSubmission from "./pages/TaskSubmission";
@@ -24,9 +27,12 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          {/* Landing and auth routes */}
-          <Route path="/" element={<Index />} />
+          {/* Initial routes */}
+          <Route path="/" element={<SplashScreen />} />
+          <Route path="/welcome" element={<WelcomeScreen />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/onboarding" element={<Onboarding />} />
           
           {/* Supervisor routes */}
           <Route path="/supervisor" element={<SupervisorHome />} />
