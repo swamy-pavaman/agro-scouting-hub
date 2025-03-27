@@ -16,7 +16,7 @@ const SplashScreen = () => {
       setTimeout(() => {
         navigate("/welcome");
       }, 500);
-    }, 100000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [navigate]);
